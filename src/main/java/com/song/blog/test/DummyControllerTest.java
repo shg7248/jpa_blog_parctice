@@ -13,6 +13,7 @@ public class DummyControllerTest {
 
         System.out.println("username : " + username);
         System.out.println("password : " + password);
+        System.out.println("emial : " + email);
 
         return "회원가입이 완료되었습니다.";
     }
