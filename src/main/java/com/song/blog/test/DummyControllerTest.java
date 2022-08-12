@@ -12,6 +12,7 @@ public class DummyControllerTest {
     public String join(String username, String password, String email) {
 
         System.out.println("username : " + username);
+        System.out.println("password : " + password);
 
         return "회원가입이 완료되었습니다.";
     }
