@@ -1,0 +1,35 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /blog
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  security:
+    user:
+      name: user
+      password: 1234
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: jspid
+    password: jsppw
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  thymeleaf:
+    suffix: .html
+    cache: false
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: create # update : 최초에만 create로 하고 update로 바꿈, none, create : 실행할때마다 테이블을 새로 만들겠다
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl # Entity(table)을 만들 때 변수명 그대로 필드에 넣어준다
+      use-new-id-generator-mappings: false # JPA의 기본 넘버링 전략을 따라가지 않겠다
+    show-sql: true # 콘솔에 sql문을 보여준다
+    properties:
+      hibernate.format_sql: true # sql문이 이쁘게 정렬해서 나온다
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
