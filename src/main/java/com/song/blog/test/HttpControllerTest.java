@@ -15,7 +15,7 @@ public class HttpControllerTest {
     // post는 url이 아닌 body란 곳에 담긴다.
     // post는 평문을 @RequestBody로 받는다.
     @PostMapping("/http/post")
-    public String postTest(@RequestBody MemberBean mem) { // MessageConverter (스프링 부트)
+    public String postTest(@RequestBody MemberBean mem) { // MessageConverter (스프링 부트), JSON과 같은 비동기 통신에 이용
         return "post 요청 : " + mem.getId() + ", " + mem.getUsername();
     }
 
