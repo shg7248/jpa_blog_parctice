@@ -50,6 +50,8 @@ public class 람다식 {
         };
 
 
+
+
     }
 
     int max(int a, int b) {
